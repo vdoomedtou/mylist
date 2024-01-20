@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        .bucketlist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .item {
+            position: relative;
+            margin: 10px;
+        }
+        .item img {
+            width: auto;
+            height: auto;
+        }
+        .item .desc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        .stamp {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleStamp(event) {
+            var stamp = event.target.parentNode.querySelector('.stamp');
+            if(stamp.style.display === 'none') {
+                stamp.style.display = 'block';
+            } else {
+                stamp.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>2024년 나의 버킷리스트</h1>
+    <div class="bucketlist">
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="1.png" alt="Bucketlist Item 1">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">잘 살기</div>
+        </div>
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="2.png" alt="Bucketlist Item 2">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">건강한 생각 갖기</div>
+        </div>
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="3.png" alt="Bucketlist Item 3">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">사람답게 말하기</div>
+        </div>
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="4.png" alt="Bucketlist Item 4">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">진실되게 말하기</div>
+        </div>
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="5.png" alt="Bucketlist Item 5">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">언제나 감사하기</div>
+        </div>
+        <div class="item" onclick="toggleStamp(event)">
+            <img src="6.png" alt="Bucketlist Item 6">
+            <img class="stamp" src="stamp.png" alt="">
+            <div class="desc">파멸적으로 놀기</div>
+        </div>
+        <!-- 다른 항목들을 이곳에 추가하세요 -->
+    </div>
+</body>
+</html>
